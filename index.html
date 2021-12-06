@@ -1,17 +1,94 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+	<title>Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+	<!-- Do not add `link` tags-->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+	<!-- Do not add `script` tags-->
+	<script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+	<script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+	<link type="text/css" rel="stylesheet" href="app/styles/w95.css">
+</head>
+
+<body>
+	<nav>
+		<h1>Tic-Tac-Toe</h1>
+	</nav>
+	<button id="start">Start New Game</button>
+	<div class="message"></div>
+
+	
+	<div class="card card-tertiary">
+        <div class="card-header">
+            <span class="icon icon-xs w95-folder"></span>
+            <span class="ml-4">Sign-Up</span>
+        </div>
+        <div>
+			<form class="card-form" id="signUp">
+				<input name="credentials[email]" type="text" >
+				<input name="credentials[password]" type="password">
+				<input name="credentials[password_confirmation]" type="password">
+				<button class="mr-2 mb-2 btn-primary" type="submit">Register</button>
+			</form>
+		</div>
+    </div>
+
+	
+
+	<div class="card card-tertiary">
+        <div class="card-header">
+            <span class="icon icon-xs w95-folder"></span>
+            <span class="ml-4">Sign-In</span>
+        </div>
+        <div>
+			<form class="card-form" id="signIn">
+				<input name="credentials[email]" type="text">
+				<input name="credentials[password]" type="password">
+				<button class="mr-2 mb-2 btn-primary" type="submit" id="#sign-in">Log In</button>
+			</form>
+		</div>
+    </div>
+	
+		
+	<div class="card card-tertiary">
+        <div>
+            <span class="icon icon-xs w95-folder"></span>
+            <span class="ml-4">Change Password</span>
+        </div>
+		<div>
+			<form class="card-form" id="changePw">
+				<input name="passwords[old]" type="password">
+				<input name="passwords[new]" type="password">
+				<button class="mr-2 mb-2 btn-primary" type="submit">Change Password</button>
+			</form>
+		</div>
+    </div>
+
+	
+
+	<div id="game-container">
+		<button class="mr-2 mb-2 btn-primary" id="signOut">Log-Out</button>
+
+		<card id="announcer" class="mr-2 mb-2 btn-primary">X Starts</card>
+
+		<div id="grid">
+			<div class="cell mr-2 mb-2 btn-primary" id="1"></div>
+			<div class="cell mr-2 mb-2 btn-primary" id="2"></div>
+			<div class="cell mr-2 mb-2 btn-primary" id="3"></div>
+			<div class="cell mr-2 mb-2 btn-primary" id="4"></div>
+			<div class="cell mr-2 mb-2 btn-primary" id="5"></div>
+			<div class="cell mr-2 mb-2 btn-primary" id="6"></div>
+			<div class="cell mr-2 mb-2 btn-primary" id="7"></div>
+			<div class="cell mr-2 mb-2 btn-primary" id="8"></div>
+			<div class="cell mr-2 mb-2 btn-primary" id="9"></div>
+		</div>
+
+		<button class="btn mr-2 mb-2" type="button" id="restart">Restart</button>
+	</div>
+</body>
+
 </html>

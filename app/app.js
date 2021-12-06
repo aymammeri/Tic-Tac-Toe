@@ -3,8 +3,15 @@
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
+// const api = require('./api.js')
+const game = require('./game.js')
+const events = require('./events.js')
 
 $(() => {
-
-
+  $('.cell').on('click', game.play)
+  $('#restart').on('click', game.restart)
+  $('#signUp').on('submit', events.onSignUp)
+  $('#signIn').on('submit', events.onSignIn)
+  $('#signOut').on('click', events.onSignOut)
+  $('#start').on('click', events.onCreateGame)
 })
