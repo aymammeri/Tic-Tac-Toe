@@ -1,4 +1,6 @@
 const Store = function () {
+  this.board = []
+
   this.x = {
     boxes: [],
     sign: 'X'

@@ -1,30 +1,44 @@
 // @import '~bootstrap/scss/bootstrap';
+html {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background-color: #008081;
     font-family: "Windows 95", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    width: 100vw;
+    background: #000181;
 }
 
 h1 {
+    margin: 0;
     font-family: "Windows 95";
-    background: #000181;
     text-align: center;
     color: white;
+    width: 100%;
 }
 
-.card-tertiary {
-    margin: 10px auto;
-    width: 275px;
-
+.card-tertiary{
+    margin: 25px auto;
+    padding: 0;
+    width: max-content;
 }
 
-.card-form {
-    margin: 25px 15px;
+.card-content {
+    padding: 15px 15px;
 }
 
-
-#game-container {
+#game {
     display: flex;
     flex-direction: column;
+    align-self: center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -42,7 +56,7 @@ h1 {
 }
 
 #grid {
-    margin: 5px auto;
+    margin: 5px 5px;
     width: 300px;
     display: grid;
     grid-template-rows: 100px 100px 100px;
@@ -58,10 +72,9 @@ h1 {
     font-size: 3em;
 }
 
-#restart {
-    font-size: 15px;
-    text-align: center;
-    background-color: #fec042;
-    width: 100px;
-    margin: 25px auto;
+#btn-div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 25px;
 }

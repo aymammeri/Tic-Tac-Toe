@@ -38,10 +38,10 @@ const createGame = function () {
   })
 }
 
-const updateGame = function (pram1, pram2, pram3) {
+const updateGame = function (pram1, pram2, pram3, pram4) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/games/' + store.game._id,
+    url: config.apiUrl + '/games/' + pram4,
     data: {
       game: {
         cell: {

@@ -10,10 +10,10 @@ const onSignUpFailure = function () {
 
 const onSignInSuccess = function (response) {
   $('.message').text('User signed in successfully')
+  $('#announcer').text('Start New Game')
   $('#sign-in-section').attr('hidden', true)
-  $('#game-section').attr('hidden', false)
+  $('.game-container').attr('hidden', false)
   store.user = response.user
-  store.game = response.game
 }
 
 const onSignInFailure = function () {
@@ -22,7 +22,9 @@ const onSignInFailure = function () {
 
 const onSignOutSuccess = function () {
   $('#sign-in-section').attr('hidden', false)
-  $('#game-section').attr('hidden', true)
+  $('.game-container').attr('hidden', true)
+  $('.cell').off('click')
+  $('.cell').text('')
   $('.message').text('User signed out successfully')
 }
 
@@ -31,8 +33,6 @@ const onSignOutFailure = function () {
 }
 
 const onCreateGameSuccess = function (response) {
-  store.game = response.game
-  console.log(store)
   $('.message').text('Game has been Created')
 }
 

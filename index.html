@@ -15,7 +15,10 @@
 </head>
 
 <body>
-	<h1>Tic-Tac-Toe</h1>
+	<nav >
+		<h1>Tic-Tac-Toe</h1>
+	</nav>
+	
 	<div class="message"></div>
 
 	<section id="sign-up-section">
@@ -25,7 +28,7 @@
 			<span class="ml-4 text-center">Register</span>
 		</div>
 
-		<div>
+		<div class="card-content">
 			<form class="card-form" id="signUp">
 				<div class="form-group">
 					<label for="email" class="mb-2">Email</label>
@@ -56,7 +59,7 @@
 			<span class="icon icon-xs w95-folder"></span>
 			<span class="ml-4">Sign-In</span>
 		</div>
-		<div>
+		<div class="card-content">
 			<form class="card-form" id="signIn">
 				<div class="form-group">
 					<label for="email" class="mb-2">Email</label>
@@ -77,27 +80,32 @@
 	</div>
     </section>
 
-	<section id="game-section" hidden>
-	<div id="game-container">
-		<button class="btn btn-block btn-primary" id="start">Start New Game</button>
-		<button class="btn btn-block btn-primary" id="signOut">Log-Out</button>
-		<card id="announcer" class="mr-2 mb-2 btn-primary">X Starts</card>
-
-		<div id="grid">
-			<div class="cell mr-2 mb-2 btn-primary" id="1"></div>
-			<div class="cell mr-2 mb-2 btn-primary" id="2"></div>
-			<div class="cell mr-2 mb-2 btn-primary" id="3"></div>
-			<div class="cell mr-2 mb-2 btn-primary" id="4"></div>
-			<div class="cell mr-2 mb-2 btn-primary" id="5"></div>
-			<div class="cell mr-2 mb-2 btn-primary" id="6"></div>
-			<div class="cell mr-2 mb-2 btn-primary" id="7"></div>
-			<div class="cell mr-2 mb-2 btn-primary" id="8"></div>
-			<div class="cell mr-2 mb-2 btn-primary" id="9"></div>
+	<div class="card card-tertiary game-container" hidden>
+		<div class="card-header">
+			<span class="icon icon-xs w95-folder"></span>
+			<span class="ml-4">Sign-In</span>
 		</div>
+		<div id="game" class="card-content">
+			<card id="announcer" class="mr-2 mb-2 btn-primary">Start New Game</card>
 
-		<button class="btn mr-2 mb-2" type="button" id="restart">Restart</button>
+			<div id="grid">
+				<div class="cell mr-2 mb-2 btn-primary" id="1"></div>
+				<div class="cell mr-2 mb-2 btn-primary" id="2"></div>
+				<div class="cell mr-2 mb-2 btn-primary" id="3"></div>
+				<div class="cell mr-2 mb-2 btn-primary" id="4"></div>
+				<div class="cell mr-2 mb-2 btn-primary" id="5"></div>
+				<div class="cell mr-2 mb-2 btn-primary" id="6"></div>
+				<div class="cell mr-2 mb-2 btn-primary" id="7"></div>
+				<div class="cell mr-2 mb-2 btn-primary" id="8"></div>
+				<div class="cell mr-2 mb-2 btn-primary" id="9"></div>
+			</div>
+	
+			<div id="btn-div">
+				<button class="btn btn-block btn-primary" id="start">Start New Game</button>
+				<button class="btn btn-block btn-primary" id="signOut">Log-Out</button>
+			</div>
+		</div>	
 	</div>
-    </section>
 </body>
 
 </html>

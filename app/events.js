@@ -17,8 +17,8 @@ const onSignUp = function (event) {
   const form = event.target
   const data = getFormFields(form)
   api.signUp(data)
-    .then(res => ui.onSignUpSuccess(res))
-    .catch(err => ui.onSignUpFailure(err))
+    .then(ui.onSignUpSuccess)
+    .catch(ui.onSignUpFailure)
 }
 
 const onSignIn = function (event) {
@@ -26,37 +26,29 @@ const onSignIn = function (event) {
   const form = event.target
   const data = getFormFields(form)
   api.signIn(data)
-    .then(res => ui.onSignInSuccess(res))
-    .catch(err => ui.onSignInFailure(err))
+    .then(ui.onSignInSuccess)
+    .catch(ui.onSignInFailure)
 }
 
 const onSignOut = function (event) {
   event.preventDefault()
   api.signOut()
-    .then(res => ui.onSignOutSuccess(res))
-    .catch(err => ui.onSignOutFailure(err))
+    .then(ui.onSignOutSuccess)
+    .catch(ui.onSignOutFailure)
 }
 
-const onCreateGame = function (event) {
-  event.preventDefault()
-  api.createGame()
-    .then(res => ui.onCreateGameSuccess(res))
-    .catch(err => ui.onCreateGameFailure(err))
-}
-
-const onUpdateGame = function (event) {
-  event.preventDefault()
-  api.updateGame()
-    .then()
-    .catch()
-}
+// const onUpdateGame = function (event) {
+//   event.preventDefault()
+//   api.updateGame()
+//     .then()
+//     .catch()
+// }
 
 module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
-  onCreateGame,
-  onUpdateGame,
+
   goToSignIn,
   goToSignUp
 }
