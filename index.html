@@ -15,64 +15,72 @@
 </head>
 
 <body>
-	<nav>
-		<h1>Tic-Tac-Toe</h1>
-	</nav>
-	<button id="start">Start New Game</button>
+	<h1>Tic-Tac-Toe</h1>
 	<div class="message"></div>
 
-	
+	<section id="sign-up-section">
 	<div class="card card-tertiary">
-        <div class="card-header">
-            <span class="icon icon-xs w95-folder"></span>
-            <span class="ml-4">Sign-Up</span>
-        </div>
-        <div>
-			<form class="card-form" id="signUp">
-				<input name="credentials[email]" type="text" >
-				<input name="credentials[password]" type="password">
-				<input name="credentials[password_confirmation]" type="password">
-				<button class="mr-2 mb-2 btn-primary" type="submit">Register</button>
-			</form>
+		<div class="card-header">
+			<span class="icon icon-xs w95-folder"></span>
+			<span class="ml-4 text-center">Register</span>
 		</div>
-    </div>
 
-	
-
-	<div class="card card-tertiary">
-        <div class="card-header">
-            <span class="icon icon-xs w95-folder"></span>
-            <span class="ml-4">Sign-In</span>
-        </div>
-        <div>
-			<form class="card-form" id="signIn">
-				<input name="credentials[email]" type="text">
-				<input name="credentials[password]" type="password">
-				<button class="mr-2 mb-2 btn-primary" type="submit" id="#sign-in">Log In</button>
-			</form>
-		</div>
-    </div>
-	
-		
-	<div class="card card-tertiary">
-        <div>
-            <span class="icon icon-xs w95-folder"></span>
-            <span class="ml-4">Change Password</span>
-        </div>
 		<div>
-			<form class="card-form" id="changePw">
-				<input name="passwords[old]" type="password">
-				<input name="passwords[new]" type="password">
-				<button class="mr-2 mb-2 btn-primary" type="submit">Change Password</button>
+			<form class="card-form" id="signUp">
+				<div class="form-group">
+					<label for="email" class="mb-2">Email</label>
+					<input name="credentials[email] id=" email" type="email" class="form-control" placeholder="Your email" required="">
+				</div>
+
+				<div class="form-group">
+					<label for="password" class="mb-2">Password</label>
+					<input name="credentials[password]" id="password" type="password" class="form-control" placeholder="Your password" required="">
+				</div>
+
+				<div class="form-group">
+					<label for="confirmPassword" class="mb-2">Confirm password</label>
+					<input name="credentials[password_confirmation]" id="confirmPassword" type="password" class="form-control" placeholder="Confirm password" required="">
+				</div>
+				<div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
+					<p class="font-weight-normal">Already a member? <a id="go-to-sign-in" class="font-weight-bold">Login</a></p>
+				</div>
+				<button class="btn btn-block btn-primary" type="submit">Register</button>
 			</form>
 		</div>
-    </div>
+	</div>
+	</section>
 
-	
+	<section id="sign-in-section" hidden>
+	<div class="card card-tertiary">
+		<div class="card-header">
+			<span class="icon icon-xs w95-folder"></span>
+			<span class="ml-4">Sign-In</span>
+		</div>
+		<div>
+			<form class="card-form" id="signIn">
+				<div class="form-group">
+					<label for="email" class="mb-2">Email</label>
+					<input name="credentials[email]" id="email" type="email" class="form-control" placeholder="Your email" required="">
+				</div>
 
+				<div class="form-group">
+					<label for="password" class="mb-2">Password</label>
+					<input name="credentials[password]" id="password" type="password" class="form-control" placeholder="Your password"
+						required="">
+				</div>
+				<div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
+					<p class="font-weight-normal">Not registered? <a id="go-to-sign-up" class="font-weight-bold">Create account</a></p>
+				</div>
+				<button id="#sign-in" type="submit" class="btn btn-block btn-primary">Login</button>
+			</form>
+		</div>
+	</div>
+    </section>
+
+	<section id="game-section" hidden>
 	<div id="game-container">
-		<button class="mr-2 mb-2 btn-primary" id="signOut">Log-Out</button>
-
+		<button class="btn btn-block btn-primary" id="start">Start New Game</button>
+		<button class="btn btn-block btn-primary" id="signOut">Log-Out</button>
 		<card id="announcer" class="mr-2 mb-2 btn-primary">X Starts</card>
 
 		<div id="grid">
@@ -89,6 +97,7 @@
 
 		<button class="btn mr-2 mb-2" type="button" id="restart">Restart</button>
 	</div>
+    </section>
 </body>
 
 </html>

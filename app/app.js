@@ -8,6 +8,8 @@ const game = require('./game.js')
 const events = require('./events.js')
 
 $(() => {
+  $('#go-to-sign-in').on('click', events.goToSignIn)
+  $('#go-to-sign-up').on('click', events.goToSignUp)
   $('.cell').on('click', game.play)
   $('#restart').on('click', game.restart)
   $('#signUp').on('submit', events.onSignUp)

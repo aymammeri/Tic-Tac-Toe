@@ -10,6 +10,8 @@ const onSignUpFailure = function () {
 
 const onSignInSuccess = function (response) {
   $('.message').text('User signed in successfully')
+  $('#sign-in-section').attr('hidden', true)
+  $('#game-section').attr('hidden', false)
   store.user = response.user
   store.game = response.game
 }
@@ -19,6 +21,8 @@ const onSignInFailure = function () {
 }
 
 const onSignOutSuccess = function () {
+  $('#sign-in-section').attr('hidden', false)
+  $('#game-section').attr('hidden', true)
   $('.message').text('User signed out successfully')
 }
 

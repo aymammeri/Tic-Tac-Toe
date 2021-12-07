@@ -1,35 +1,26 @@
 // @import '~bootstrap/scss/bootstrap';
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
-
 body {
     background-color: #008081;
-    font-family: 'VT323', sans-serif;
-}
-
-nav {
-
-    background: #000181;
+    font-family: "Windows 95", sans-serif;
 }
 
 h1 {
+    font-family: "Windows 95";
+    background: #000181;
     text-align: center;
     color: white;
 }
 
 .card-tertiary {
+    margin: 10px auto;
     width: 275px;
+
 }
 
 .card-form {
     margin: 25px 15px;
-    display: flex;
-    flex-direction: column;
 }
 
-.card-form > * {
-    margin-top: 15px;
-}
 
 #game-container {
     display: flex;
