@@ -1,6 +1,7 @@
 const store = require('./store.js')
 
 const onSignUpSuccess = function () {
+  $('#signUp').trigger('reset')
   $('.message').text('User signed up successfully')
 }
 
@@ -9,10 +10,12 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (response) {
+  $('.card-form').trigger('reset')
   $('.message').text('User signed in successfully')
   $('#announcer').text('Start New Game')
   $('#sign-in-section').attr('hidden', true)
   $('.game-container').attr('hidden', false)
+  $('#signIn').trigger('reset')
   store.user = response.user
 }
 
