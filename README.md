@@ -1,7 +1,7 @@
 # Project One
 ==============
 
-[Link to Game](https://aymammeri.github.io/Tic-Tac-Tow/)
+[Link to Game](https://aymammeri.github.io/Tic-Tac-Toe/)
 
 ## Tic-Tac-Toe
 

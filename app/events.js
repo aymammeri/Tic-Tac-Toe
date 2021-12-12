@@ -48,7 +48,6 @@ module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
-
   goToSignIn,
   goToSignUp
 }
